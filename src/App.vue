@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="app">
+    <router-view></router-view>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import { db } from "./plugins/firebase";
+
+export default {
+  
+};
+</script>
+
+<style>
+@media screen and (max-width: 600px) {
+  span,
+  p {
+    font-size: 0.75rem;
+  }
 }
 
-#nav {
-  padding: 30px;
+p {
+  max-width: 640px;
+  line-height: 25px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+html {
+  font-size: 16px;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.max-height {
+  min-height: 100%;
 }
 </style>
