@@ -103,6 +103,7 @@ const router = new VueRouter({
       component: Main,
       redirect: { name: 'Home' },
       children: [
+        
         {
           name: 'Home',
           path: '/home',
@@ -146,10 +147,7 @@ const router = new VueRouter({
           path: '/contatos',
           component: Contacts
         },
-        {
-          path: '*',
-          component: notFound
-        }
+        
       ]
     },
   ]
